@@ -1,12 +1,11 @@
 module Parsers
   class SoccerFileParser < Parsers::FileParser
-
     def parse
       raise FileFileNotFoundError unless File.exist?(@file)
 
       File.open(@file).map do |line|
         parsed_line = line.scan(/(\w+)/).flatten
-        
+
         # Data rows contains exactly 9 items, anything lesser than this we
         # can skip to clean headers and formatting from parsed array.
         next if parsed_line.size < 9
@@ -17,7 +16,7 @@ module Parsers
 
     def get_smallest_goals_difference_team
       smallest_goals_difference = nil
-      smallest_goals_difference_team = ''
+      smallest_goals_difference_team = ""
 
       @parsed_data.each do |data|
         # After parsed the data is available at following indexes:
@@ -38,6 +37,5 @@ module Parsers
 
       smallest_goals_difference_team
     end
-
   end
 end

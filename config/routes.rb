@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
 
-  get 'weather/smallest_temperature_spread_day', to: 'weather#smallest_temperature_spread_day', as: :weather_result
-  get 'soccer/smallest_goals_difference_team', to: 'soccer#smallest_goals_difference_team', as: :soccer_result
+  get "weather/smallest_temperature_spread_day", to: "weather#smallest_temperature_spread_day", as: :weather_result
+  get "soccer/smallest_goals_difference_team", to: "soccer#smallest_goals_difference_team", as: :soccer_result
 end

@@ -1,6 +1,5 @@
 module Parsers
   class FileParser
-
     attr_reader :parsed_data
 
     def initialize(file)
@@ -10,8 +9,7 @@ module Parsers
 
     def parse
       raise FileFileNotFoundError unless File.exist?(@file)
-      File.open(@file).map {|line| line.scan(/(\w+)/).flatten}.compact
+      File.open(@file).map { |line| line.scan(/(\w+)/).flatten }.compact
     end
-
   end
 end

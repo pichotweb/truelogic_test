@@ -1,11 +1,9 @@
 require "test_helper"
 
 module Lib
-
   class WeatherFileParserTest < ActiveSupport::TestCase
-
     def setup
-      @filename = 'storage/app/w_data (1).txt'
+      @filename = "storage/app/w_data (1).txt"
     end
 
     test "should parse file correctly gathering only usefull data" do
@@ -18,5 +16,4 @@ module Lib
       assert_equal "14", parser.get_smallest_temperature_spread_day, "Returned wrong day"
     end
   end
-
 end

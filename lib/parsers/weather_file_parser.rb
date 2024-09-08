@@ -1,6 +1,5 @@
 module Parsers
   class WeatherFileParser < Parsers::FileParser
-
     def parse
       raise FileFileNotFoundError unless File.exist?(@file)
 
@@ -10,7 +9,7 @@ module Parsers
         # As long we are using 3 first columns, we can use this approach for simplicity, if we do need the blank column we should map each data position individually
         next if parsed_line.size < 19
 
-        [parsed_line[0], parsed_line[1], parsed_line[2]]
+        [ parsed_line[0], parsed_line[1], parsed_line[2] ]
       end.compact
     end
 
@@ -22,7 +21,7 @@ module Parsers
         # After parsed the data is available at following indexes:
         # 0 - Day of the month
         # 1 - Maximum temp
-        # 2 - Minimum temp 
+        # 2 - Minimum temp
         temperature_spread = (data[1].to_i - data[2].to_i)
 
         # Sets the smallest difference for the first positioned team, as long they all can have negatives differences
@@ -31,6 +30,5 @@ module Parsers
 
       day_number
     end
-
   end
 end
