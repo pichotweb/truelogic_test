@@ -1,24 +1,39 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Truelogic test
 
-Things you may want to cover:
+## Description
+The test was made in Rails and has the logic for test in `lib/parsers` folder
+The provided txt files are stored in `storage/app` folder
 
-* Ruby version
+## Test
+```bash
+  ./bin/rails test
+```
 
-* System dependencies
+## Requirements
+Make sure to have Ruby 3.2.3 installed.
 
-* Configuration
+## Installation
+1. Clone this repository to your local machine:
+```bash
+git clone https://github.com/pichotweb/truelogic_test.git
+``` 
+2.  Navigate to the project directory:
+```bash
+cd truelogic-test 
+```     
+3.   Install dependencies using Bundler:
+```bash
+bundle install 
+```
 
-* Database creation
+4. Start the development server, use the following command:0
+```bash
+./bin/dev
+```
+The server will be started at http://localhost:3000 by default.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+(Optional) There's a docker-compose ready environment that exposes the 3000 port
+```bash
+docker-compose up --build
+```
