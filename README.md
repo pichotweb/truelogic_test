@@ -20,7 +20,7 @@ git clone https://github.com/pichotweb/truelogic_test.git
 ``` 
 2.  Navigate to the project directory:
 ```bash
-cd truelogic-test 
+cd truelogic_test 
 ```     
 3.   Install dependencies using Bundler:
 ```bash
