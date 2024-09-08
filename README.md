@@ -2,8 +2,8 @@
 # Truelogic test
 
 ## Description
-The test was made in Rails and has the logic for test in `lib/parsers` folder
-The provided txt files are stored in `storage/app` folder
+The test was made in Rails and has the logic for test in `lib/parsers` folder  
+The provided txt files are stored in `storage/app` folder  
 
 ## Test
 ```bash
